@@ -8,22 +8,22 @@ import java.util.Random;
  */
 public class examples {
 
-	public static void main(String[] args) {	
-		
+	public static void main(String[] args) {
+		/*
 		int pessoas = 30, aceitos = 0;
 		Scanner sc = new Scanner(System.in);
-	
-		for (int i=1; i <= 30; i++) {
+
+		for (int i = 1; i <= 30; i++) {
 			System.out.print("Quer pudim? ");
 			String opcao = sc.nextLine();
-			if(opcao.equalsIgnoreCase("S")) {
+			if (opcao.equalsIgnoreCase("S")) {
 				aceitos++;
 			}
-			System.out.println("Ainda Faltam: " + (pessoas - i) + "\n");			
-		}		
+			System.out.println("Ainda Faltam: " + (pessoas - i) + "\n");
+		}
 		System.out.println("Pessoas servidas: " + aceitos);
+	*/ 
 		
-
 		/*
 		 * Exemplo 1 com while: Estrutura repete um número indeterminado de vezes
 		 * 
@@ -36,41 +36,46 @@ public class examples {
 		 * sc.nextLine(); } System.out.println("Isso! Você acertou!");
 		 * 
 		 */
-	/*
-	 * 	String nome;
-		Random aleatorio = new Random();
-		int capacidadeGarrafa = 500, qtdAguaGarrafa=0, qtdAcionamentosFiltro=0, qtdGarrafasCheias=0;
-		boolean satisfeito = true; //representa se estou satisfeito com a quantidade de agua na garrafa
+		/*
+		 * String nome; Random aleatorio = new Random(); int capacidadeGarrafa = 500,
+		 * qtdAguaGarrafa=0, qtdAcionamentosFiltro=0, qtdGarrafasCheias=0; boolean
+		 * satisfeito = true; //representa se estou satisfeito com a quantidade de agua
+		 * na garrafa
+		 * 
+		 * Scanner sc = new Scanner(System.in); //Exemplo 2: Enchimento garrafa while
+		 * (qtdGarrafasCheias < 4) { while (satisfeito) { //funcao apertar filtro
+		 * qtdAguaGarrafa += aleatorio.nextInt(50); qtdAcionamentosFiltro++;
+		 * System.out.println("Encheu: " + qtdAguaGarrafa + " ml"); if(qtdAguaGarrafa >
+		 * 450) { satisfeito = false; } } qtdGarrafasCheias++; qtdAguaGarrafa=0;
+		 * satisfeito = true; System.out.println("\nGarrafas cheias: " +
+		 * qtdGarrafasCheias); System.out.println("Apertei o filtro para a garrafa " +
+		 * qtdGarrafasCheias + "  "+ qtdAcionamentosFiltro + " vezes \n");
+		 * qtdAcionamentosFiltro=0; }
+		 */
+		
+		//Desafio mostrar algarismos de um determinado numero
+		String numero;
+		char algarismos[];
 
 		Scanner sc = new Scanner(System.in);
-				//Exemplo 2: Enchimento garrafa
-		while (qtdGarrafasCheias < 4) {
-			while (satisfeito) {
-				//funcao apertar filtro		
-					qtdAguaGarrafa += aleatorio.nextInt(50);
-					qtdAcionamentosFiltro++;
-					System.out.println("Encheu: " + qtdAguaGarrafa + " ml");
-					if(qtdAguaGarrafa > 450) {
-						satisfeito = false;							
-					}
-			}
-			qtdGarrafasCheias++;
-			qtdAguaGarrafa=0;
-			satisfeito = true;
-			System.out.println("\nGarrafas cheias: " + qtdGarrafasCheias);
-			System.out.println("Apertei o filtro para a garrafa " + qtdGarrafasCheias + "  "+ qtdAcionamentosFiltro + " vezes \n");
-			qtdAcionamentosFiltro=0;
-		}
-		*/		
-		
-		/*Exemplo com Do While - Executa pelo menos uma vez
-		 * do {
-			System.out.print("Qual o nome do professor da semana passada: ");
-			nome = sc.nextLine();
-			System.out.println((!nome.equalsIgnoreCase("Francisco")) ? "Tente Novamente \n" : "Isso, você acertou!");
+		System.out.println("Digite um numero qualquer");
+		numero = sc.nextLine();
+		algarismos = new char[numero.length()];
+		System.out.println("O numero " + numero + " tem " + numero.length() + " algarismos.");
+		for (int i = 0; i < numero.length(); i++) {
+			algarismos[i] = numero.charAt(i);
 
-		} while (!nome.equalsIgnoreCase("Francisco"));
-		*/
+			System.out.println("O " + (i + 1) + " Algarismo é: " + algarismos[i]);
+		}
+
+		/*
+		 * Exemplo com Do While - Executa pelo menos uma vez do {
+		 * System.out.print("Qual o nome do professor da semana passada: "); nome =
+		 * sc.nextLine(); System.out.println((!nome.equalsIgnoreCase("Francisco")) ?
+		 * "Tente Novamente \n" : "Isso, você acertou!");
+		 * 
+		 * } while (!nome.equalsIgnoreCase("Francisco"));
+		 */
 
 		sc.close();
 	}
