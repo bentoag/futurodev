@@ -1,5 +1,6 @@
 package week4;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -24,9 +25,9 @@ public class PessoaMaisVelha {
 			System.out.println("Dados da " + (i + 1) + "ª pessoa:");
 			System.out.print("Digite o Nome: ");
 			nomes[i] = sc.next();
+
 			System.out.print("Digite a idade: ");
 			idades[i] = sc.nextInt();
-
 			if (idades[i] > idadeDoMaisVelho) {
 				idadeDoMaisVelho = idades[i];
 			} else {
