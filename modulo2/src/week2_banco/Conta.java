@@ -2,12 +2,16 @@ package week2_banco;
 
 public class Conta {
 
-	Integer numero;
+	String numero;
 	String titular;
-	Double saldo=0.0;
+	double saldo=0.0;
 
-	Double getSaldo() {
+	double getSaldo() {
 		return this.saldo;
+	}
+	
+	public String getNumero() {
+		return this.numero;
 	}
 	boolean saque(Double valor) {
 		if (valor > this.saldo) {

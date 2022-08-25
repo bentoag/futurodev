@@ -2,9 +2,10 @@ package week1;
 
 public class Conta {
 
+	
 	String numeroConta;
 	private double saldo;
-
+	
 	Conta(String numeroConta, double saldo) {
 		this.numeroConta = numeroConta;
 		this.saldo = saldo;
@@ -14,8 +15,8 @@ public class Conta {
 		this.numeroConta = numeroConta;
 		this.saldo = 0.0;
 	}
-
-	// retornar o saldo
+	
+		// retornar o saldo
 	public double getSaldo() {
 		return this.saldo;
 	}
